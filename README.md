@@ -18,9 +18,9 @@ A fully responsive and modern personal portfolio website built with **HTML, CSS,
 ---
 
 ## 🛠️ Tech Stack  
-![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white)  
-![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white)  
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white)  
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=black)
+
 
 ---
 
