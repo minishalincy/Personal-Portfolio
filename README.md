@@ -1,20 +1,20 @@
-# 🌟 Personal Portfolio Website
+# Personal Portfolio Website
 
 ## 🔗 Live Preview  
-👉 [**View Here**](https://personal-portfolio-q9lq.vercel.app/)  
+[**View Here**](https://personal-portfolio-q9lq.vercel.app/)  
 
 ---
 
-## ✨ Overview  
+## Overview  
 A fully responsive and modern personal portfolio website built with **HTML, CSS, and JavaScript**. It highlights my projects, education, skills, and achievements, all wrapped in a clean and interactive design with smooth animations and a dynamic background.  
 
 ---
 
-## 🚀 Features  
-- ✅ Fully responsive & mobile-friendly design  
-- ✅ Smooth scrolling & active section highlights   
-- ✅ Downloadable resume button  
-- ✅ Contact form with basic validation   
+## Features  
+- Fully responsive & mobile-friendly design  
+- Smooth scrolling & active section highlights   
+- Downloadable resume button  
+- Contact form with basic validation   
 
 ---
 
