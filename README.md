@@ -1,7 +1,5 @@
 # 🌟 Personal Portfolio Website
 
-![Portfolio Banner](./screenshots/banner.png)
-
 ## 🔗 Live Preview  
 👉 [**View Here**](https://personal-portfolio-q9lq.vercel.app/)  
 
@@ -27,19 +25,6 @@ A fully responsive and modern personal portfolio website built with **HTML, CSS,
 
 ---
 
-## 📸 Screenshots  
-### 🏠 Home  
-![Home Section](./screenshots/home.png)  
-
-### 💼 Projects  
-![Projects Section](./screenshots/projects.png)  
-
-### 📝 Contact  
-![Contact Section](./screenshots/contact.png)  
-
-*(Add screenshots of each section inside a `screenshots` folder in the repo)*  
-
----
 
 ## 🖥️ Installation & Setup  
 
