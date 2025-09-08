@@ -694,6 +694,12 @@ nav .bi {
         gap: 12px;
         padding: 10px 10px 2px;
     }
+    @media (max-width: 768px) {
+  .work-list {
+    grid-template-columns: 1fr; /* single column on tablets/phones */
+  }
+}
+
 
 }
 
