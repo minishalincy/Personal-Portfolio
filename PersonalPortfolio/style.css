@@ -705,6 +705,11 @@ nav ul .bi {
   margin-top: -45px;
   display: block;
 }
-
-
+ #mail-icon {
+        font-size: 0.8em; /* smaller icon size for mobile */
+    }
+   .contact-left .sub-title {
+        margin-top: -50px;
+        padding: 30px; /* moves text slightly upward */
+    }
 }
