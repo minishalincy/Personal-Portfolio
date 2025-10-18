@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X S Minisha - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="Images/logo.png" class="logo" alt="Minisha Lincy Logo">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi! I'm</span>
+                        <span class="name">X S Minisha</span>
+                        <span class="alias">Alias Lincy</span>
+                    </h1>
+                    <p class="hero-description">
+                        💡 Web App Developer | 📖 Tech Learner | MERN Stack | Data Structures & Algorithms | Java Coder
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate Full Stack Developer</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Images/user.jpg" alt="Minisha Lincy">
+                </div>
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a passionate Full Stack Web Developer with a strong interest in building dynamic and
+                        responsive web applications using the MERN stack. I love to code and bring ideas to life through clean,
+                        functional, and user-friendly websites. Constantly seeking growth, I regularly attend workshops, 
+                        hackathons, and networking events. I believe in continuous learning and actively explore new technologies.
+                    </p>
+                    <div class="tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="skills">Skills</button>
+                            <button class="tab-btn" data-tab="achievements">Achievements</button>
+                            <button class="tab-btn" data-tab="education">Education</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="skills">
+                                <div class="skill-item">
+                                    <h4>Front-end</h4>
+                                    <p>Designing scalable user experiences using HTML, CSS, JavaScript, React.js, and responsive UI principles</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h4>Back-end</h4>
+                                    <p>Building robust server-side logic with Node.js, Express.js, MongoDB, RESTful APIs, and authentication systems</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h4>Full Stack</h4>
+                                    <p>Developing end-to-end web applications with the MERN stack, ensuring seamless integration between front-end and back-end</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="achievements">
+                                <div class="achievement-item">
+                                    <h4>🏆 Parent Sync - Hackathon Winner (Feb 2025)</h4>
+                                    <p>Tech Stack: React Native (Expo), Node.js, Express.js, MongoDB. Developed a cross-platform parental engagement app for Android & iOS, enabling real-time teacher-parent communication with voice/text remarks and smart notifications. Integrated AI-driven multilingual support (IndicTrans2) and a TTS voice assistant using AI4Bharat. Implemented a scalable backend and offline-first architecture for seamless performance even without internet connectivity.</p>
+                                </div>
+                                <div class="achievement-item">
+                                    <h4>🏅 3rd Place - Tech Quiz Competition</h4>
+                                    <p>Secured 3rd place in a quiz competition and won Microsoft Azure goodies for fastest performance.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="education">
+                                <div class="education-item">
+                                    <h4>2022-2026</h4>
+                                    <p>Bachelor of Computer Science and Engineering</p>
+                                </div>
+                                <div class="education-item">
+                                    <h4>CGPA</h4>
+                                    <p>8.5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/work-1.png" alt="Parent Sync">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/minishalincy/InvokED-4.0" target="_blank" class="project-link">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Parent Sync</h3>
+                        <p class="project-description">
+                            Created a mobile app that helps parents stay connected with their child's education through
+                            real-time updates, voice and chat support in multiple languages, even without internet.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/work-2.png" alt="Docuno">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://docuno-frontend.onrender.com" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Docuno</h3>
+                        <p class="project-description">
+                            Docuno is a scalable, production-ready full-stack appointment booking system built using the
+                            MERN Stack. Designed for doctors, hospitals, and clinics to manage patient appointments seamlessly.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/work-3.png" alt="GearUp">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://gear-up-996w-o4331g4k2-minishalincys-projects.vercel.app" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GearUp</h3>
+                        <p class="project-description">
+                            GearUp is a Full Stack Car Marketplace Application that allows users to browse, search, list, and
+                            manage car listings, as well as engage in real-time chat with potential buyers or sellers.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/work-4.png" alt="Toolkit.ai">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://toolkit-ai-six.vercel.app" target="_blank" class="project-link">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Toolkit.ai</h3>
+                        <p class="project-description">
+                            Toolkit.ai is a SaaS platform that unifies multiple AI-powered tools into a single
+                            application.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">AI Integration</span>
+                            <span class="tech-tag">SaaS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:xsminishaaliaslincycse2026@gmail.com">xsminishaaliaslincycse2026@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-phone-fill"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:9901288026">+91 9901288026</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/x-s-minisha-alias-lincy-7649b2259/" target="_blank" class="social-link">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/minishalincy" target="_blank" class="social-link">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://discordapp.com/users/minishalincy" target="_blank" class="social-link">
+                            <i class="bi bi-discord"></i>
+                        </a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1aBXqgGWFhPcZa0VRHRb7MFYlEtzlHaRb/view?usp=drivesdk" 
+                       target="_blank" class="btn btn-primary">Download Resume</a>
+                </div>
+                <div class="contact-form">
+                    <form name="submit-to-google-sheet">
+                        <div class="form-group">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="msg" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Minisha Lincy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and panes
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding pane
+                btn.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxZVNxjoqIBLtGgKqJ3Uh9X4vrSZU9y3FvNigl-KBwIs4pW-foJ1OBDXjQCL10p2irJ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            msg.innerHTML = "Sending...";
+            msg.style.color = "#ffd230";
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!";
+                    msg.style.color = "#4ade80";
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => {
+                    msg.innerHTML = "Error sending message. Please try again.";
+                    msg.style.color = "#ef4444";
+                    console.error('Error!', error.message);
+                });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
