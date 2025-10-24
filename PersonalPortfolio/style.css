@@ -16,6 +16,7 @@ body {
     color: white;
 }
 
+
 #header {
     width: 100%;
     height: 100vh;
@@ -23,6 +24,10 @@ body {
     display: flex;
     align-items: center;
 }
+
+
+
+
 
 .header-text {
     text-align: left;
@@ -88,8 +93,8 @@ nav {
 /* NAV LINKS */
 #sidemenu {
     display: flex;
-    gap: 40px;
-    margin-left: 40%; /* Push links to right */
+    gap: 60px;
+    margin-left: 25%; /* Push links to right */
     align-items: center;
     list-style: none;
 }
