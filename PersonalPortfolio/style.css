@@ -98,7 +98,7 @@ nav {
     font-size: 60px;
     text-align: center;
     justify-content: center;
-    margin-top: 400px;
+    margin-top: 450px;
     /* margin-left: 120px; */
 }
 
@@ -113,8 +113,7 @@ nav {
     line-height: 1.6;
     max-width: 800px;
     text-align: center;
-    margin: 40px auto 0 auto;
-    /* margin-left: 120px; */
+    margin-left: 170px;
     justify-content: center;
 }
 
@@ -122,11 +121,21 @@ nav {
 /* About Me Section */
 .about-col-1 img {
     width: 100%;
-    border-radius: 15px;
-    max-width: 300px; /* Adjust to your preferred size */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Optional: crop to fit the box neatly */
+    border-radius: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid rgba(255, 193, 7, 0.3); /* Light mustard border */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+/* Hover Effect */
+.about-col-1 img:hover {
+    transform: scale(1.05);  /* Slight Zoom */
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0.7); /* Mustard yellow glow */
+    border-color: rgba(255, 193, 7, 1); /* Darker on hover */
+}
+
 
 .about-col-1 {
     flex-basis: 35%;
