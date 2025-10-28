@@ -404,7 +404,7 @@ form .btn2 {
   margin: 10vh 0 0 0;  
   padding: 2vh 3vw;
   max-width: 94%;
-  text-align: center;
+  ;
 }
 
 /* Smart scaling text */
@@ -420,6 +420,7 @@ form .btn2 {
   hyphens: auto;
   text-transform: none;
   color: #ffffff;
+  text-align: left
 }
 
 
@@ -453,11 +454,13 @@ form .btn2 {
 
   /* Keywords paragraph positioned below header with safe spacing */
   .keywords p {
-    font-size: clamp(14px, 3.4vw, 16px); /* responsive small paragraph */
+    /* font-size: clamp(14px, 3.4vw, 16px);  */
+    font-size: 20px;
     color: #ffffff;
     margin: 7vh auto 0 auto;
     max-width: 92%;
     text-align: center;
+    justify-content: center;
     line-height: 1.45;
     word-break: break-word;
   }
