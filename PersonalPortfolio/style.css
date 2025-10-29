@@ -163,15 +163,30 @@ nav {
 
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    align-items: center;
+    border: 2px solid rgba(255, 210, 48, 0.3); /* transparent yellow outer border */
+    border-radius: 8px;
+    padding: 6px 14px;
+    width: fit-content;
+    margin: 10px 0 10px 0spx; /* top, right, bottom, left — shifts slightly left */
+    gap: 25px; /* even space between tabs */
+    background: rgba(255, 210, 48, 0.05); /* subtle background tint */
+    backdrop-filter: blur(4px); /* soft blur for a modern effect */
 }
 
+
 .tab-links {
-    margin-right: 60px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    padding: 1px 6px;
+    color: #fff; /* adjust to your theme */
+    transition: 0.3s ease;
+}
+
+.tab-links:hover {
+    color: #ffd230;
 }
 
 .tab-links::after {
@@ -181,13 +196,14 @@ nav {
     background: #ffd230;
     position: absolute;
     left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+    bottom: -6px;
+    transition: 0.4s;
 }
 
 .tab-links.active-link::after {
     width: 50%;
 }
+
 
 .tab-contents ul li {
     list-style: none;
@@ -621,31 +637,43 @@ nav ul .bi {
   width: 100%;
   max-width: 250px;
   height: auto;
-  border-radius: 20px;
+  border-radius: 100%;
   margin: 0 auto;
 }
 
 .about-col-2 {
   font-size: 15px;
-  text-align: justify;
+  /* text-align: justify; */
   max-width: 100%;
   padding: 0 5px;
 }
-
+.about-col-2 p{
+  text-align: justify;
+}
 .sub-title {
   font-size: 28px;
   text-align: center;
 }
 
-.tab-links {
-  font-size: 15px;
-  margin-right: 10px;
-  display: inline-block;
-}
+ .tab-titles {
+        justify-content: center;
+        text-align: center;
+        margin: 10px auto; /* center box on mobile */
+        padding: 8px 12px;
+        gap: 12px;
+        width: 110%; /* make it flexible */
+    }
 
-.tab-titles {
-  text-align: center;
-}
+    .tab-links {
+        font-size: 15px;
+        margin-right: 10px;
+        padding: 4px 6px;
+        display: inline-block;
+    }
+
+    .tab-links::after {
+        bottom: -4px; /* adjust underline spacing */
+    }
 
 .portfolio {
   padding: 0 15px;
@@ -701,7 +729,7 @@ nav ul .bi {
   padding: 10px 10px 2px;
 }
 
-@media (max-width: 768px) {
+
   .work-list {
     grid-template-columns: 1fr; /* single column on tablets/phones */
   }
@@ -719,4 +747,3 @@ nav ul .bi {
         margin-top: -50px;
         padding: 30px; /* moves text slightly upward */
     }
-}
