@@ -399,351 +399,179 @@ form .btn2 {
     color: #ffd230;
 }
 
-/* ---------------- MOBILE FIXED / RESPONSIVE ---------------- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap');
-
 @media only screen and (max-width: 600px) {
-  /* Header container adjusts to content height (no huge fixed vh) */
+  /* Header container: avoid huge vh values that push layout */
   #header {
     background: #000;
-    padding: 12vh 4vw;         /* responsive padding */
+    padding: 30vh 4vw;      /* reduced */
     text-align: center;
-    height: auto;            /* avoid 100vh causing overflow */
+    height: auto;
     display: block;
   }
 
- .header-text {
-  position: relative;
-  color: #ffffff;
-  font-family: 'Orbitron', sans-serif;
-  line-height: 1.15;
-  margin: 10vh 0 0 0;  
-  padding: 2vh 3vw;
-  max-width: 94%;
-  ;
-}
+  .header-text {
+    position: relative;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.15;
+    margin: 2vh 0 0 0;     /* removed huge top margin */
+    padding: 2vh 3vw;
+    max-width: 94%;
+  }
 
-/* Smart scaling text */
-.header-text h1 {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 53px;
-  line-height: 1.1;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  text-transform: none;
-  color: #ffffff;
-  text-align: left
-}
+  /* Use clamp for responsive h1 sizing instead of fixed px */
+  .header-text h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: clamp(26px, 7vw, 42px); /* safe scaling on small screens */
+    line-height: 1.08;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-transform: none;
+    color: #fff;
+    text-align: left;
+  }
 
-
-
-
- 
-  /* .header-text h1 span {
-   color: #ffd230;
-  } */
-
- 
-  /* .header-text h1 span:nth-child(1) { color: #ffffff; } 
-  .header-text h1 span:nth-child(n+2) { color: #FFD93D; }  */
-  /* subtle text shadow to improve contrast on black */
-  /* .header-text h1 span:nth-child(n+2) {
-    text-shadow: 0 2px 8px rgba(255, 217, 48, 0.12);
-  } */
-
-  /* Animations (optional): staggered slide-up but not affecting layout */
+  /* Animations: keep, but they should not affect layout */
   @keyframes slideUpLight {
     from { transform: translateY(8px); opacity: 0; }
     to   { transform: translateY(0);    opacity: 1; }
   }
   .header-text h1 span {
-    animation: slideUpLight 500ms ease forwards;
-  }
-  .header-text h1 span:nth-child(1) { animation-delay: 0.08s; }
-  .header-text h1 span:nth-child(2) { animation-delay: 0.18s; }
-  .header-text h1 span:nth-child(3) { animation-delay: 0.28s; }
-  .header-text h1 span:nth-child(4) { animation-delay: 0.38s; }
+  animation: slideUpLight 500ms ease forwards;
+  display: block;  /* this forces it to appear on the next line */
+  font-size: 22px; /* avoid strange wrapping */
+}
 
-  /* Keywords paragraph positioned below header with safe spacing */
+
   .keywords p {
-    /* font-size: clamp(14px, 3.4vw, 16px);  */
-    font-size: 20px;
-    color: #ffffff;
-    margin: 7vh auto 0 auto;
+    font-size: clamp(14px, 3.4vw, 16px);
+    color: #fff;
+    margin: 4vh auto 0;
     max-width: 92%;
     text-align: center;
-    justify-content: center;
     line-height: 1.45;
     word-break: break-word;
   }
 
+  /* Nav: a single definition instead of multiple conflicting blocks */
   nav {
-  height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #000;
+    z-index: 1000;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.1px 10px #ffd230;
+  }
+
+  .logo { width: 88px; max-width: 32vw; }
+nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
-  z-index: 1000;
+  background-color: #000;
+  height: 60px;
   padding: 10px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.1px 10px #ffd230;
+  box-shadow: 0 0.5px 10px #ffd230;
+  z-index: 1000;
 }
 
-.logo {
-  width: 100px;
+/* Hamburger icon */
+#menu-icon {
+  font-size: 30px;
+  color: #ffd230;
+  cursor: pointer;
+  display: block;
+  z-index: 2000; /* ensure it stays above everything */
 }
 
+/* Side menu (hidden offscreen by default) */
 #sidemenu {
   position: fixed;
-  top: 68px;
-  right: -200px;
-  background: goldenrod;
-  width: 150px;
-  height: 100vh;
-  padding-top: 60px;
-  transition: right 0.5 ease;
-  flex-direction: column;
-}
-
-#sidemenu li {
-  display: block;
-  margin: -6px 0; /* 10px vertical spacing only */
-}
-
-#sidemenu i {
-  position: absolute;
-  display: block;
-  color: gainsboro;
-  margin: 20px;
-  font-size: 24px;
-  top: -10px; /* Move up */
-  right: 60px; /* Move left — adjust as needed */
-  cursor: pointer;
-}
-
-.bi-list {
-  display: block;
-  color: #ffd230;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* .header-text {
-  margin-top: 200px; 
-  text-align: center;
-  font-size: 18px;
-  padding: 10px;
-} */
-
-nav {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px 5%;
-}
-
-nav ul {
-  width: 100%;
-  padding-left: 0;
-}
-
-nav ul li {
-  display: block;
-  margin: 10px 0;
-}
-
-nav ul li a {
-  font-size: 16px;
-}
-
-.container {
-  padding: 10px 5%;
-}
-
-
-
-
-/* .header-text h1 {
-  font-size: 50px;
-  margin-bottom: 10px; 
-  line-height: 1.1; 
-} */
-
-img {
-  width: 100%;
-  height: auto;
-  margin-top: 90px;
-}
-
-nav .bi {
-  display: block;
-  font-size: 25px;
-  margin-top: -20px;
-}
-
-nav ul {
-  background: #ffd23080;
-  position: fixed;
   top: 0;
-  right: -250px;
+  right: -250px; /* offscreen */
   width: 250px;
   height: 100vh;
-  padding-top: 50px;
-  z-index: 2;
-  transition: right 0.5s;
-}
-
-nav .bi-list {
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  right: 20px;
-  top: 35px;
-  cursor: pointer;
-}
-
-nav ul li {
-  margin: 25px;
-  display: block;
-}
-
-nav ul .bi {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  cursor: pointer;
-}
-
-
-/* ---------------------------------------- */
-.row {
-  flex-direction: column;
-  padding: 10px 15px; /* Less space on sides */
-  gap: 20px;
-}
-
-.about-col-1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.about-col-1 img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 100%;
-  margin: 0 auto;
-}
-
-.about-col-2 {
-  font-size: 15px;
-  /* text-align: justify; */
-  max-width: 100%;
-  padding: 0 5px;
-}
-.about-col-2 p{
-  text-align: justify;
-}
-.sub-title {
-  font-size: 28px;
-  text-align: center;
-}
-
- .tab-titles {
-        justify-content: center;
-        text-align: center;
-        margin: 10px auto; /* center box on mobile */
-        padding: 8px 12px;
-        gap: 12px;
-        width: 110%; /* make it flexible */
-    }
-
-    .tab-links {
-        font-size: 15px;
-        margin-right: 10px;
-        padding: 4px 6px;
-        display: inline-block;
-    }
-
-    .tab-links::after {
-        bottom: -4px; /* adjust underline spacing */
-    }
-
-.portfolio {
-  padding: 0 15px;
-}
-
-.portfolio .work-list {
-  grid-template-columns: 1fr; /* stack one per row */
-  gap: 20px;
-}
-
-.portfolio .work img {
-  width: 100%;
-}
-
-.portfolio h1.sub-title {
-  font-size: 24px;
-  text-align: center;
-}
-
-.portfolio .layer p {
-  font-size: 14px;
-}
-
-.portfolio .btn {
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.layer a {
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  margin-top: -20px; /* Move upward slightly */
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: -38px;
-  align-self: flex-end;
-}
-
-.layer h3 {
-  margin-top: 20px;
-}
-
-.layer p {
-  margin: 0;
-  font-size: 10px;
+  background-color: #111;
+  transition: right 0.4s ease;
+  z-index: 1500;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 10px 10px 2px;
+  gap: 25px;
+}
+
+/* List items */
+#sidemenu li {
+  list-style: none;
+}
+
+#sidemenu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+#sidemenu li a:hover {
+  color: #ffd230;
+}
+
+/* Close icon (X) */
+#close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #ffd230;
+  cursor: pointer;
+  z-index: 2001; /* ensures it's visible above the menu */
+}
+
+/* When menu opens */
+#sidemenu.open {
+  right: 0;
 }
 
 
-  .work-list {
-    grid-template-columns: 1fr; /* single column on tablets/phones */
-  }
-}
+  /* Prevent any element from explicitly exceeding 100% width */
+  .tab-titles { width: 100%; justify-content: center; margin: 10px auto; padding: 8px 12px; gap: 12px; box-sizing: border-box; }
+  .tab-links { font-size: 15px; margin-right: 10px; padding: 4px 6px; display: inline-block; }
 
-#msg {
-  color: greenyellow;
-  margin-top: -45px;
-  display: block;
+  .container { padding: 10px 5%; box-sizing: border-box; }
+
+  .row { display: flex; flex-direction: column; padding: 10px 12px; gap: 18px; }
+
+  .about-col-1 { text-align: center; margin-bottom: 12px; }
+  .about-col-1 img { width: 100%; max-width: 220px; height: auto; border-radius: 50%; margin: 0 auto; }
+
+  .about-col-2 { font-size: 15px; max-width: 100%; padding: 0 5px; }
+  .about-col-2 p { text-align: justify; }
+
+  .sub-title { font-size: 22px; text-align: center; }
+
+  .portfolio { padding: 0 12px; }
+  .portfolio .work-list { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .portfolio h1.sub-title { font-size: 20px; text-align: center; }
+
+  /* small adjustments to icons and messages */
+  #msg { color: greenyellow; margin-top: 0; display: block; }
+  #mail-icon { font-size: 0.9em; }
+
+  /* final safety: if any element still tries to overflow, cap it */
+  .force-fit { max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
 }
- #mail-icon {
-        font-size: 0.8em; /* smaller icon size for mobile */
-    }
-   .contact-left .sub-title {
-        margin-top: -50px;
-        padding: 30px; /* moves text slightly upward */
-    }
