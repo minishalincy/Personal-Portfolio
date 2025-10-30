@@ -5,9 +5,9 @@
 
 ---
 
-## Overview  
+<!-- ## Overview  
 A fully responsive and modern personal portfolio website built with **HTML, CSS, and JavaScript**. It highlights my projects, education, skills, and achievements, all wrapped in a clean and interactive design.
----
+--- -->
 
 ## Features  
 - Fully responsive & mobile-friendly design  
