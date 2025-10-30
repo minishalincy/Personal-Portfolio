@@ -306,6 +306,17 @@
     link.addEventListener('click', () => sidemenu.classList.remove('open'));
   });
 </script>
+<script>
+  document.querySelectorAll('.work').forEach(work => {
+    work.addEventListener('click', () => {
+      // Remove active from other works
+      document.querySelectorAll('.work').forEach(w => w.classList.remove('active'));
+      // Toggle this one
+      work.classList.toggle('active');
+    });
+  });
+</script>
+
 
 
 
